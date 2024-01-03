@@ -9,17 +9,13 @@ import { useEffect } from 'react';
 
 function App() {
 
-  useEffect(() => {
-    window.location.pathname === '/Portfolio' && window.location.replace('/home');
-  })
-
   return (
     <BrowserRouter>
       <div className="App">
         <Navbar/>
         <div className="content">
           <Routes>
-            <Route path='/home' element={<Home/>} />
+            <Route path='/Portfolio' element={<Home/>} />
             <Route path='/about' element={<About/>} />
             <Route path='/experience' element={<Experience/>} />
             <Route path='/work' element={<Work/>} />
