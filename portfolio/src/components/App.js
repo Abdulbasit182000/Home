@@ -5,15 +5,21 @@ import Navbar from './Navbar';
 import { BrowserRouter, Routes, Route, redirect } from 'react-router-dom';
 import Work from './Work';
 import Contact from './Contact';
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    window.location.pathname === '/Portfolio' && window.location.replace('/home');
+  })
+
   return (
     <BrowserRouter>
       <div className="App">
         <Navbar/>
         <div className="content">
           <Routes>
-            <Route path='/Portfolio' element={<Home/>} />
+            <Route path='/home' element={<Home/>} />
             <Route path='/about' element={<About/>} />
             <Route path='/experience' element={<Experience/>} />
             <Route path='/work' element={<Work/>} />
