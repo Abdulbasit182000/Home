@@ -39,7 +39,7 @@ const Work = () => {
   }
   return (
     <div className="work">
-      <h1>My Work Experience</h1>
+      <h1>Projects that I have done ...</h1>
             <div className="tabs">
                 {tabs.map((tab, i) => 
                     <button
