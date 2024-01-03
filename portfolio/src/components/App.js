@@ -2,7 +2,7 @@ import About from './About';
 import Experience from './Experience';
 import Home from './Home';
 import Navbar from './Navbar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, redirect } from 'react-router-dom';
 import Work from './Work';
 import Contact from './Contact';
 
@@ -11,7 +11,6 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar/>
-
         <div className="content">
           <Routes>
             <Route path='/Portfolio' element={<Home/>} />
